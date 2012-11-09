@@ -37,9 +37,9 @@
 %undefine _missing_build_ids_terminate_build
 
 Name:           grub2
-Epoch:          2
+Epoch:          1
 Version:        2.0
-Release:        0.38.beta6%{?dist}
+Release:        0.39.beta6%{?dist}
 Summary:        Bootloader with support for Linux, Multiboot and more
 
 Group:          System Environment/Base
@@ -391,8 +391,8 @@ fi
 %doc grub-%{tarversion}/themes/starfield/COPYING.CC-BY-SA-3.0
 
 %changelog
-* Thu Nov 08 2012 Richard Neuboeck <hawk@tbi.univie.ac.at> - 2.0-0.38.beta6 - epoch 2
-- Fixes SAS sysfs info path assemgling bug
+* Thu Nov 08 2012 Richard Neuboeck <hawk@tbi.univie.ac.at> - 2.0-0.39.beta6
+- Fixes SAS sysfs info path assembling bug
   Related: RedHat Bugzilla 826833
 
 * Thu Aug 02 2012 Peter Jones <pjones@redhat.com> - 2.0-0.38.beta6

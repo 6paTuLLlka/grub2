@@ -37,7 +37,7 @@
 %undefine _missing_build_ids_terminate_build
 
 Name:           grub2
-Epoch:          1
+Epoch:          2
 Version:        2.0
 Release:        0.38.beta6%{?dist}
 Summary:        Bootloader with support for Linux, Multiboot and more
@@ -65,6 +65,7 @@ Patch18:	grub-2.00-support-vscsi-on-ibm-ppc.patch
 Patch19:	grub-2.00-ppc-usb-quiesce.patch
 Patch20:	grub-2.00-no-double-free.patch
 Patch21:	grub-2.00-ppc_handle_devices_with_comma.patch
+Patch22:        grub-2.00-sas-sysfs-path-assembling.patch
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -390,6 +391,10 @@ fi
 %doc grub-%{tarversion}/themes/starfield/COPYING.CC-BY-SA-3.0
 
 %changelog
+* Thu Nov 08 2012 Richard Neuboeck <hawk@tbi.univie.ac.at> - 2.0-0.38.beta6 - epoch 2
+- Fixes SAS sysfs info path assemgling bug
+  Related: RedHat Bugzilla 826833
+
 * Thu Aug 02 2012 Peter Jones <pjones@redhat.com> - 2.0-0.38.beta6
 - PPC - Handle device paths with commas correctly.
   Related: rhbz#828740
